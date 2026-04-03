@@ -12,21 +12,28 @@
 
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="index.html" class="brand">
-        <img src="assets/patch.png" alt="Mangum Police Patch" class="brand-patch" />
+
+      <a href="../index.html" class="brand">
+        <img src="../assets/patch.png" alt="Mangum Police Patch" class="brand-patch" />
         <div class="brand-text">
           <span class="brand-top">Mangum Police Department</span>
           <span class="brand-bottom">Mangum, Oklahoma</span>
         </div>
       </a>
- 
-      <nav class="main-nav">
-        <a href="pages/services.html">Services</a>
-        <a href="pages/records.html">Records</a>
-        <a href="pages/officers.html">Your Officers</a>
-        <a href="pages/community.html">Community</a>
-        <a href="pages/updates.html">Updates</a>
-        <a href="index.html#contact">Contact</a>
+
+      <!-- MOBILE BUTTON -->
+      <button class="nav-toggle" id="navToggle">
+        ☰
+      </button>
+
+      <!-- NAV -->
+      <nav class="main-nav" id="mainNav">
+        <a href="services.html">Services</a>
+        <a href="../index.html#leadership">Leadership</a>
+        <a href="officers.html">Your Officers</a>
+        <a href="community.html">Community</a>
+        <a href="updates.html">Updates</a>
+        <a href="../index.html#contact">Contact</a>
       </nav>
 
     </div>
@@ -456,6 +463,14 @@
         FB.XFBML.parse();
       }
     };
+  </script>
+  <script>
+    const toggle = document.getElementById("navToggle");
+    const nav = document.getElementById("mainNav");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
   </script>
   <script
     async
