@@ -1,0 +1,174 @@
+/* =========================================================
+   OFFICERS PAGE HERO
+   ========================================================= */
+.officers-hero {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(45,116,215,0.14), transparent 26%),
+    radial-gradient(circle at 82% 18%, rgba(243,112,33,0.10), transparent 20%),
+    linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+
+/* =========================================================
+   OFFICER GRIDS
+   ========================================================= */
+.officer-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.command-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.fulltime-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* =========================================================
+   OFFICER CARDS
+   ========================================================= */
+.officer-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.officer-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.16);
+  box-shadow:
+    0 18px 34px rgba(0,0,0,0.28),
+    0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.officer-photo-wrap {
+  padding: 1rem 1rem 0;
+  background:
+    radial-gradient(circle at top right, rgba(243,112,33,0.08), transparent 24%),
+    linear-gradient(180deg, rgba(29,79,145,0.10), rgba(255,255,255,0.01));
+}
+
+.officer-photo {
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.officer-card-body {
+  padding: 1.15rem 1.2rem 1.35rem;
+}
+
+.officer-card-body h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.4rem;
+}
+
+.officer-card-body p {
+  margin: 0 0 0.75rem;
+  color: var(--text-soft);
+}
+
+.officer-focus {
+  margin-bottom: 0 !important;
+  color: var(--text-main);
+}
+
+/* =========================================================
+   RESERVE SECTION
+   ========================================================= */
+.reserve-recognition-panel {
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  box-shadow: var(--shadow-lg);
+}
+
+.reserve-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.reserve-card {
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.025);
+}
+
+.reserve-photo-wrap {
+  padding: 0.8rem;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top right, rgba(243,112,33,0.08), transparent 24%),
+    linear-gradient(180deg, rgba(29,79,145,0.10), rgba(255,255,255,0.01));
+  margin-bottom: 0.9rem;
+}
+
+.reserve-photo {
+  width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.reserve-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+}
+
+.reserve-card p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.reserve-appreciation {
+  padding: 1.2rem 1.2rem 1.1rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.reserve-appreciation h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.35rem;
+}
+
+.reserve-appreciation p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1080px) {
+  .command-grid,
+  .fulltime-grid,
+  .reserve-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .command-grid,
+  .fulltime-grid,
+  .reserve-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reserve-recognition-panel {
+    padding: 1.1rem;
+  }
+
+  .officer-photo {
+    max-height: 300px;
+  }
+}

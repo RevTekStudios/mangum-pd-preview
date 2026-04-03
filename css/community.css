@@ -1,0 +1,153 @@
+/* =========================================================
+   COMMUNITY PAGE HERO
+   ========================================================= */
+.community-hero {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(45,116,215,0.12), transparent 26%),
+    radial-gradient(circle at 82% 18%, rgba(243,112,33,0.10), transparent 20%),
+    linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+
+/* =========================================================
+   FEATURED PANEL
+   ========================================================= */
+.community-feature-panel p + p {
+  margin-top: 1rem;
+}
+
+/* =========================================================
+   COMMUNITY EVENT CARDS
+   ========================================================= */
+.community-card-grid {
+  align-items: stretch;
+}
+
+.community-detail-card {
+  min-height: 230px;
+}
+
+/* =========================================================
+   CTA PANEL
+   ========================================================= */
+.community-cta-panel {
+  max-width: 100%;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1080px) {
+  .community-detail-card {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 820px) {
+  .community-feature-panel,
+  .community-cta-panel {
+    padding: 1.2rem;
+  }
+}
+
+/* =========================================================
+   COMMUNITY GALLERY
+   ========================================================= */
+.community-gallery-block + .community-gallery-block {
+  margin-top: 3rem;
+}
+
+.community-gallery-head {
+  max-width: 820px;
+  margin-bottom: 1.25rem;
+}
+
+.community-gallery-head h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.65rem;
+}
+
+.community-gallery-head p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.community-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.community-photo-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  box-shadow: var(--shadow-md);
+}
+
+.community-photo-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.community-photo-card:hover img {
+  transform: scale(1.04);
+}
+
+.photo-feature {
+  grid-row: span 2;
+  min-height: 520px;
+}
+
+.photo-feature-wide {
+  grid-column: span 2;
+  min-height: 320px;
+}
+
+.snowball-grid .community-photo-card:not(.photo-feature),
+.halloween-grid .community-photo-card:not(.photo-feature-wide),
+.strong-grid .community-photo-card:not(.photo-feature-wide) {
+  min-height: 250px;
+}
+
+/* =========================================================
+   RESPONSIVE GALLERY
+   ========================================================= */
+@media (max-width: 1080px) {
+  .community-photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .photo-feature {
+    grid-row: span 1;
+    min-height: 340px;
+  }
+
+  .photo-feature-wide {
+    grid-column: span 2;
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 820px) {
+  .community-photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-feature,
+  .photo-feature-wide {
+    grid-column: span 1;
+    grid-row: span 1;
+    min-height: 260px;
+  }
+
+  .snowball-grid .community-photo-card:not(.photo-feature),
+  .halloween-grid .community-photo-card:not(.photo-feature-wide),
+  .strong-grid .community-photo-card:not(.photo-feature-wide) {
+    min-height: 220px;
+  }
+}

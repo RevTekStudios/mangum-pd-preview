@@ -1,0 +1,57 @@
+/* =========================================================
+   RECORDS PAGE HERO
+   ========================================================= */
+.records-hero {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(45,116,215,0.14), transparent 26%),
+    radial-gradient(circle at 82% 18%, rgba(243,112,33,0.10), transparent 20%),
+    linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+
+/* =========================================================
+   FEATURE PANEL
+   ========================================================= */
+.records-feature-panel {
+  max-width: 100%;
+}
+
+/* =========================================================
+   CARD SECTIONS
+   ========================================================= */
+.records-card-grid {
+  align-items: stretch;
+}
+
+.records-detail-card {
+  min-height: 220px;
+}
+
+.records-process-panel {
+  min-height: 215px;
+}
+
+.records-contact-panel {
+  max-width: 100%;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1080px) {
+  .records-detail-card,
+  .records-process-panel {
+    min-height: 190px;
+  }
+}
+
+@media (max-width: 820px) {
+  .records-feature-panel,
+  .records-contact-panel {
+    padding: 1.2rem;
+  }
+
+  .records-detail-card,
+  .records-process-panel {
+    min-height: auto;
+  }
+}
